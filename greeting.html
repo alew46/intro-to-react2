@@ -6,9 +6,11 @@
 
   <body>
     <div id="app"></div>
+    <div id="weather"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
     <script type="text/babel">
            class Greeting extends React.Component {
              render() {
@@ -25,6 +27,27 @@
     );
 
     </script>
+
+    <script type="text/babel">
+      class Weather extends React.Component {
+        render() {
+          return (
+            <div>
+              <h2>WEATHER TODAY</h2>
+              <p>42°</p>
+              <p>Sunny</p>
+            </div>
+          );
+        }
+
+      }
+
+      ReactDOM.render(
+        <Weather />, document.getElementById('weather')
+      );
+
+    </script>
+
   </body>
 
 </html>
